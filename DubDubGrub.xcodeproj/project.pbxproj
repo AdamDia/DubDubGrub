@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		8A7818F529488A5300C2A194 /* DubDubGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7818F429488A5300C2A194 /* DubDubGrubApp.swift */; };
-		8A7818F729488A5300C2A194 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7818F629488A5300C2A194 /* ContentView.swift */; };
 		8A7818F929488A5400C2A194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A7818F829488A5400C2A194 /* Assets.xcassets */; };
 		8A7818FC29488A5400C2A194 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A7818FB29488A5400C2A194 /* Preview Assets.xcassets */; };
+		8A781903294897E900C2A194 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A781902294897E900C2A194 /* Color+Ext.swift */; };
+		8A7819062948986400C2A194 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7819052948986400C2A194 /* AppTabView.swift */; };
+		8A7819082948989F00C2A194 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7819072948989F00C2A194 /* LocationMapView.swift */; };
+		8A78190A294898BC00C2A194 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A781909294898BC00C2A194 /* LocationListView.swift */; };
+		8A78190C294898CD00C2A194 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A78190B294898CD00C2A194 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A7818F129488A5300C2A194 /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7818F429488A5300C2A194 /* DubDubGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubDubGrubApp.swift; sourceTree = "<group>"; };
-		8A7818F629488A5300C2A194 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A7818F829488A5400C2A194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A7818FB29488A5400C2A194 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A781902294897E900C2A194 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		8A7819052948986400C2A194 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		8A7819072948989F00C2A194 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
+		8A781909294898BC00C2A194 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		8A78190B294898CD00C2A194 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +60,13 @@
 			isa = PBXGroup;
 			children = (
 				8A7818F429488A5300C2A194 /* DubDubGrubApp.swift */,
-				8A7818F629488A5300C2A194 /* ContentView.swift */,
+				8A7819052948986400C2A194 /* AppTabView.swift */,
+				8A7819072948989F00C2A194 /* LocationMapView.swift */,
+				8A781909294898BC00C2A194 /* LocationListView.swift */,
+				8A78190B294898CD00C2A194 /* Profile.swift */,
 				8A7818F829488A5400C2A194 /* Assets.xcassets */,
 				8A7818FA29488A5400C2A194 /* Preview Content */,
+				8A7819042948984600C2A194 /* Extensions */,
 			);
 			path = DubDubGrub;
 			sourceTree = "<group>";
@@ -65,6 +77,14 @@
 				8A7818FB29488A5400C2A194 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A7819042948984600C2A194 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A781902294897E900C2A194 /* Color+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A7818F729488A5300C2A194 /* ContentView.swift in Sources */,
 				8A7818F529488A5300C2A194 /* DubDubGrubApp.swift in Sources */,
+				8A7819082948989F00C2A194 /* LocationMapView.swift in Sources */,
+				8A78190C294898CD00C2A194 /* Profile.swift in Sources */,
+				8A78190A294898BC00C2A194 /* LocationListView.swift in Sources */,
+				8A7819062948986400C2A194 /* AppTabView.swift in Sources */,
+				8A781903294897E900C2A194 /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
