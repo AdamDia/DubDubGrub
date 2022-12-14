@@ -13,7 +13,11 @@ struct LocationListView: View {
         NavigationView {
             List {
                 ForEach(viewModel.locationsArray) { locationItem in
-                    LocationListViewCell(location: locationItem)
+                    NavigationLink(destination: LocationDetails()) {
+                        VStack {
+                            LocationListViewCell(location: locationItem)
+                        }
+                    }
                 }
             }
             .navigationTitle("Grub Spots")

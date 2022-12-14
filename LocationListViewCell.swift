@@ -18,18 +18,23 @@ struct LocationListViewCell: View {
                 .frame(width: 80, height: 80)
                 .clipShape(Circle())
                 .padding(.vertical, 8)
+            
             VStack(alignment: .leading) {
                 Text(location.locationName)
-                    .font(.title2)
+                    .font(.title3)
                     .fontWeight(.semibold)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.75)
+//                    .lineLimit(1)
+//                    .minimumScaleFactor(0.75)
+                    .fixedSize()  ///check for solution the font is wrapping before it crosses the limit so I made it fixed 
+                    
+                    
                 
                 HStack {
-                    AvatarView()
-                    AvatarView()
-                    AvatarView()
-                    AvatarView()
+                    AvatarView(size: 35, imageName: "default-avatar")
+                    AvatarView(size: 35, imageName: "default-avatar")
+                    AvatarView(size: 35, imageName: "default-avatar")
+                    AvatarView(size: 35, imageName: "default-avatar")
+                    AvatarView(size: 35, imageName: "default-avatar")
                 }
             }
             .padding(.leading)
@@ -39,28 +44,19 @@ struct LocationListViewCell: View {
 
 struct LocationListViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        LocationListViewCell(location: LocationListDataModel(imageName: "default-square-asset", locationName: "Default Name", peopleExists: [people(imageName: "default-avatar")]))
+        LocationListViewCell(location: LocationListDataModel(imageName: "default-square-asset", locationName: "Default Name", peopleExists: [people(imageName: "default-avatar", personName: "Adam")]))
     }
 }
 
-
-struct LocationListDataModel: Identifiable {
-    var id = UUID()
-    let imageName: String
-    let locationName: String
-    let peopleExists: [people]
-}
-
-struct people {
-    var imageName: String
-}
-
 struct AvatarView: View {
+    var size: CGFloat
+    var imageName: String
+    
     var body: some View {
-        Image("default-avatar")
+        Image(imageName)
             .resizable()
             .scaledToFit()
-            .frame(width: 30, height: 30)
+            .frame(width: size, height: size)
             .clipShape(Circle())
     }
 }
